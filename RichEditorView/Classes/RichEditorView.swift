@@ -489,9 +489,9 @@ private let DefaultInnerLineHeight: Int = 21
     private func updateHeight() {
         runJS("document.getElementById('editor').clientHeight") { heightString in
             let height = Int(heightString) ?? 0
-            if self.editorHeight != height {
+//            if self.editorHeight != height {
                 self.editorHeight = height
-            }
+//            }
         }
     }
     
