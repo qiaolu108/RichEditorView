@@ -336,14 +336,14 @@ private let DefaultInnerLineHeight: Int = 21
         runJS("RE.setJustifyRight()")
     }
     
-    public func insertImage(_ url: String, alt: String) {
-        runJS("RE.prepareInsert()")
-        runJS("RE.insertImage('\(url.escaped)', '\(alt.escaped)')")
-    }
-    
     public func insertImage(_ url: String, alt: String, width: String) {
         runJS("RE.prepareInsert()")
         runJS("RE.insertImage('\(url.escaped)', '\(alt.escaped)', '\(width.escaped)')")
+    }
+    
+    public func insertLink(_ href: String, title: String) {
+        runJS("RE.prepareInsert()")
+        runJS("RE.insertLink('\(href.escaped)', '\(title.escaped)')")
     }
     
     public func focus() {
